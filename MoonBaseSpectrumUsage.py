@@ -164,7 +164,7 @@ def create_band_plot(
                 f"BW={bw:.4f}"
             ),
             xy=(center, i),
-            xytext=(15, 0),
+            xytext=(8, 0),
             textcoords="offset points",
             ha="left",
             va="center",
@@ -303,7 +303,7 @@ while True:
             fig, axes = plt.subplots(
                 len(used_bands),
                 1,
-                figsize=(16, 4 * len(used_bands))
+                figsize=(10, 3.5 * len(used_bands))
             )
 
             if len(used_bands) == 1:
@@ -425,7 +425,7 @@ while True:
         fig, axes = plt.subplots(
             len(used_bands),
             1,
-            figsize=(16, 4 * len(used_bands))
+            figsize=(10, 3.5 * len(used_bands))
         )
 
         if len(used_bands) == 1:
@@ -455,7 +455,18 @@ while True:
             fontweight="bold"
         )
 
-        plt.tight_layout()
+        plt.tight_layout(
+            pad=1.0,
+            w_pad=0.5,
+            h_pad=1.0
+        )
+
+        plt.subplots_adjust(
+            left=0.10,
+            right=0.95,
+            top=0.90,
+            bottom=0.08
+        )
 
         plt.show()
 
