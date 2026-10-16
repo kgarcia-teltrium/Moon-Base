@@ -39,19 +39,37 @@ The tool reads mission frequency assignments from a CSV file and generates frequ
 
 ---
 
-## requirements.txt
+## Install Dependencies
 
-Create a file named:
+The repository already includes a `requirements.txt` file containing all required Python packages.
 
-```text
-requirements.txt
+After activating your virtual environment, install the dependencies with:
+
+```bash
+pip install -r requirements.txt
 ```
 
-with the following contents:
+or, if using uv:
 
-```text
-pandas>=2.0.0
-matplotlib>=3.8.0
+```bash
+uv pip install -r requirements.txt
+```
+
+This will install:
+
+- pandas
+- matplotlib
+
+Verify the installation with:
+
+```bash
+pip list
+```
+
+or
+
+```bash
+uv pip list
 ```
 
 ---
